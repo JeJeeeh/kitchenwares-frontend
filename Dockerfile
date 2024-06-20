@@ -3,6 +3,7 @@ FROM node:18-alpine
 WORKDIR /app
 
 COPY package.json .
+COPY package-lock.json .
 
 RUN npm install
 
@@ -12,4 +13,4 @@ RUN npm run build
 
 EXPOSE 8081
 
-CMD ["npm", "run", "preview"]
+CMD ["npm", "start"]
