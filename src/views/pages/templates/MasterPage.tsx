@@ -2,6 +2,7 @@ import ResponsiveAppBar from "../../components/templates/ResponsiveAppBar.tsx";
 import {Outlet} from "react-router-dom";
 import Container from "@mui/material/Container";
 import Box from "@mui/material/Box";
+import ConsentModal from "../../components/modals/ConsentModal.tsx";
 
 const MasterPage = () => {
     return (
@@ -13,6 +14,7 @@ const MasterPage = () => {
             <Container>
                 <Outlet />
             </Container>
+            <ConsentModal />
         </>
     )
 }

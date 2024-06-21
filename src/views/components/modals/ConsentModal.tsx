@@ -1,8 +1,9 @@
 import Typography from "@mui/material/Typography";
-import {Box, Modal} from "@mui/material";
+import {Box, Modal, Stack} from "@mui/material";
 import {useDispatch, useSelector} from "react-redux";
 import {RootState} from "../../../store";
 import {consentModalSliceActions} from "../../../features/consentModalSlice.ts";
+import Button from "@mui/material/Button";
 
 const style = {
     position: 'absolute' as 'absolute',
@@ -33,11 +34,18 @@ const ConsentModal = () => {
         >
             <Box sx={style}>
                 <Typography id="modal-modal-title" variant="h6" component="h2">
-                    Text in a modal
+                    User Data Agreement
                 </Typography>
                 <Typography id="modal-modal-description" sx={{ mt: 2 }}>
-                    Duis mollis, est non commodo luctus, nisi erat porttitor ligula.
+                    Your data will be saved and used for saving preferences etc.
                 </Typography>
+                <Box sx={{
+                    height: 10
+                }} />
+                <Stack direction={'row'} justifyContent={'space-between'}>
+                    <Button variant={'outlined'} onClick={handleClose}>Agree</Button>
+                    <Button variant={'outlined'} color={'error'} onClick={handleClose}>Disagree</Button>
+                </Stack>
             </Box>
         </Modal>
     )

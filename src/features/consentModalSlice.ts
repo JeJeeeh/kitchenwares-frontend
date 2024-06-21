@@ -5,7 +5,7 @@ interface InitialState {
 }
 
 const initialState: InitialState = {
-    open: false,
+    open: true,
 }
 
 const consentModalSlice = createSlice({
