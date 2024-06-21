@@ -1,7 +1,7 @@
 import axios, {AxiosInstance} from "axios";
 import store from "../store";
 
-const baseUrl: string = "http://kitchenwares-gateway.kitchenwares:8001/api"
+const baseUrl: string = "http://127.0.0.1:8001/api"
 const axiosPrivate: AxiosInstance = axios.create({
     baseURL: baseUrl
 })
